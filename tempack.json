@@ -1,0 +1,17 @@
+{
+  "package": {
+    "mergeWith": {
+      "main": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "omit": [
+      "private",
+      "scripts",
+      "devDependencies",
+      "jest"
+    ]
+  },
+  "files": [
+    "README.md"
+  ]
+}

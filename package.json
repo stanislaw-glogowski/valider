@@ -1,0 +1,47 @@
+{
+  "name": "valider",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Object schema validator",
+  "author": {
+    "name": "Stanislaw Glogowski",
+    "email": "hello@newobject.pl"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanislaw-glogowski/valider.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf ./dist/*",
+    "build": "tsc",
+    "postbuild": "tempack ./dist/",
+    "lint": "tslint --exclude node_modules **/*.ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.2",
+    "@types/node": "^8.0.12",
+    "jest": "^20.0.4",
+    "rimraf": "^2.6.1",
+    "tempack": "0.0.1",
+    "ts-jest": "^20.0.7",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.1"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(\\.spec)\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
